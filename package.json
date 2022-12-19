@@ -1,0 +1,34 @@
+{
+  "name": "PokemonSV",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mitchell Nguyen <mitchellnguyen0@gmail.com>",
+  "license": "MIT",
+
+  "nodecg": {
+    "compatibleRange": ">=0.9",
+	"dashboardPanels": [
+      {
+        "name": "Stream",
+        "title": "Stream",
+        "width": 3,
+        "file": "Stream.html",
+        "headerColor": "#990000"
+      }
+    ],
+    "graphics": [
+	  
+	  {
+        "file": "Stream.html",
+        "width": 1920,
+        "height": 1080
+      }
+	  
+    ]
+	
+  }
+}
