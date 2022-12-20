@@ -23,11 +23,45 @@
     "graphics": [
 	  
 	  {
-        "file": "Stream.html",
-        "width": 1920,
-        "height": 1080
-      }
-	  
+        "file": "horizontal.html",
+        "width": 1800,
+        "height": 278
+      },
+	  {
+		  "file": "vertical.html",
+		  "width": 300,
+		  "height": 1667
+	  },
+	  {
+		  "file": "FirstPokemon.html",
+		  "width": 300,
+		  "height": 278
+	  },
+	  {
+		  "file": "SecondPokemon.html",
+		  "width": 300,
+		  "height": 278
+	  },
+	  {
+		  "file": "ThirdPokemon.html",
+		  "width": 300,
+		  "height": 278
+	  },
+	  {
+		  "file": "FourthPokemon.html",
+		  "width": 300,
+		  "height": 278
+	  },
+	  {
+		  "file": "FifthPokemon.html",
+		  "width": 300,
+		  "height": 278
+	  },
+	  {
+		  "file": "SixthPokemon.html",
+		  "width": 300,
+		  "height": 278
+	  }
     ]
 	
   }

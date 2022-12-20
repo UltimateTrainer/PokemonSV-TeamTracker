@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+ <html>
+	<script src="pic.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.2/gsap.min.js"></script>
+ <head>
+	<style>
+		@font-face {
+			src: url('fonts/FFFFORWA.ttf');
+			font-family: "FF";
+		}
+		#Poke1{
+			font-size:38px;
+			font-family: "FF";
+			color: Yellow;
+			display: none;
+		}
+		.pokes{
+			display: none;
+		}
+		.pokeimg{
+			position: absolute;
+			left: 0px;
+		}
+		.number{
+			font-size:38px;
+			font-family: "FF";
+			color: Yellow;
+			position: absolute;
+			left: 240px;
+		}
+		/* Places the numbers in the boxes */
+		#number1{
+			top: 15px;
+		}
+		#Pokeimg1{
+		top: 0px;
+		}
+		
+		
+	</style>
+ </head>
+ <body>
+	<span id="number1" class="number" type="text">1</span>
+	<span id="Poke1" class="pokes" type="text"></span>
+	<img id="Pokeimg1" class="pokeimg" width="256" height="256">
+	<img src="img/SVUI.png"></img>
+</body>
+<script>
+	const Pokemon1Replicant = nodecg.Replicant('Poke1');
+	
+	var Pokemon1 = $('#Poke1');
+	
+	
+	Pokemon1Replicant.on('change', (newValue, oldValue) => {
+		Poke1.innerText = `${newValue}`;
+	});
+	
+</script
+ </html>

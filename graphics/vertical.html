@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+ <html>
+	<script src="pic.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.2/gsap.min.js"></script>
+ <head>
+	<style>
+		@font-face {
+			src: url('fonts/FFFFORWA.ttf');
+			font-family: "FF";
+		}
+		#Poke1{
+			font-size:38px;
+			font-family: "FF";
+			color: Yellow;
+			display: none;
+		}
+		.pokes{
+			display: none;
+		}
+		.pokeimg{
+			position: absolute;
+			left: 0px;
+		}
+		.number{
+			font-size:38px;
+			font-family: "FF";
+			color: Yellow;
+			position: absolute;
+			left: 240px;
+		}
+		/* Places the numbers in the boxes */
+		#number1{
+			top: 15px;
+		}
+		#number2{
+			top: 293px;
+		}
+		#number3{
+			top: 571px;
+		}
+		#number4{
+			top: 849px;
+		}
+		#number5{
+			top: 1127px;
+		}
+		#number6{
+			top: 1405px;
+		}
+		#Pokeimg1{
+		top: 0px;
+		}
+		#Pokeimg2{
+		top: 278px;
+		}
+		#Pokeimg3{
+		top: 556px;
+		}
+		#Pokeimg4{
+		top: 834px;
+		}
+		#Pokeimg5{
+		top: 1112px;
+		}
+		#Pokeimg6{
+		top: 1390px;
+		}
+		
+		
+	</style>
+ </head>
+ <body>
+	<span id="number1" class="number" type="text">1</span>
+	<span id="number2" class="number" type="text">2</span>
+	<span id="number3" class="number" type="text">3</span>
+	<span id="number4" class="number" type="text">4</span>
+	<span id="number5" class="number" type="text">5</span>
+	<span id="number6" class="number" type="text">6</span>
+	<span id="Poke1" class="pokes" type="text"></span>
+	<span id="Poke2" class="pokes" type="text"></span>
+	<span id="Poke3" class="pokes" type="text"></span>
+	<span id="Poke4" class="pokes" type="text"></span>
+	<span id="Poke5" class="pokes" type="text"></span>
+	<span id="Poke6" class="pokes" type="text"></span>
+	<img id="Pokeimg1" class="pokeimg" width="256" height="256">
+	<img id="Pokeimg2" class="pokeimg" width="256" height="256">
+	<img id="Pokeimg3" class="pokeimg" width="256" height="256">
+	<img id="Pokeimg4" class="pokeimg" width="256" height="256">
+	<img id="Pokeimg5" class="pokeimg" width="256" height="256">
+	<img id="Pokeimg6" class="pokeimg" width="256" height="256">
+	<img src="img/SVUIVertical.png"></img>
+</body>
+<script>
+	const Pokemon1Replicant = nodecg.Replicant('Poke1');
+	const Pokemon2Replicant = nodecg.Replicant('Poke2');
+	const Pokemon3Replicant = nodecg.Replicant('Poke3');
+	const Pokemon4Replicant = nodecg.Replicant('Poke4');
+	const Pokemon5Replicant = nodecg.Replicant('Poke5');
+	const Pokemon6Replicant = nodecg.Replicant('Poke6');
+	
+	var Pokemon1 = $('#Poke1');
+	var Pokemon2 = $('#Poke2');
+	var Pokemon3 = $('#Poke3');
+	var Pokemon4 = $('#Poke4');
+	var Pokemon5 = $('#Poke5');
+	var Pokemon6 = $('#Poke6');
+	
+	
+	Pokemon1Replicant.on('change', (newValue, oldValue) => {
+		Poke1.innerText = `${newValue}`;
+	});
+	
+	Pokemon2Replicant.on('change', (newValue, oldValue) => {
+		Poke2.innerText = `${newValue}`;
+	});
+	
+	Pokemon3Replicant.on('change', (newValue, oldValue) => {
+		Poke3.innerText = `${newValue}`;
+	});
+	
+	Pokemon4Replicant.on('change', (newValue, oldValue) => {
+		Poke4.innerText = `${newValue}`;
+	});
+	
+	Pokemon5Replicant.on('change', (newValue, oldValue) => {
+		Poke5.innerText = `${newValue}`;
+	});
+	
+	Pokemon6Replicant.on('change', (newValue, oldValue) => {
+		Poke6.innerText = `${newValue}`;
+	});
+</script
+ </html>
