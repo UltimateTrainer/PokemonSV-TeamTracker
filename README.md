@@ -1,4 +1,5 @@
 # PokemonSV-TeamTracker
+A tracker for Pokemon teams in Pokemon Scarlet and Violet. Can be used to display your team for streaming your single player playthrough or Battle Stadium battles.
 ## Installation
 If you already have the NodeCG framework just clone the above code and put it in a folder named "PokemonSV-TeamTracker" and run NodeCG
 
