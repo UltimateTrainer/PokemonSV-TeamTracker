@@ -27,7 +27,7 @@
 <body>
 	<label>First Pokemon:</label>
 	<select id="Pokemon1">
-		<option value=""> </option>
+		<option value=""></option>
 			<option value="001Sprigatito">001Sprigatito</option>
 			<option value="002Floragato">002Floragato</option>
 			<option value="003Meowscarada">003Meowscarada</option>
@@ -452,6 +452,7 @@
 			<option value="Perrserker">Perrserker</option>
 			<option value="Quagsire">Quagsire</option>
 	</select>
+	<input type="checkbox" id="glow1">
 	<br>
 	<label>Second Pokemon:</label>
 	<select id="Pokemon2">
@@ -880,6 +881,7 @@
 			<option value="Perrserker">Perrserker</option>
 			<option value="Quagsire">Quagsire</option>
 	</select>
+	<input type="checkbox" id="glow2">
 	<br>
 	<label>Third Pokemon:</label>
 	<select id="Pokemon3">
@@ -1308,6 +1310,7 @@
 			<option value="Perrserker">Perrserker</option>
 			<option value="Quagsire">Quagsire</option>
 	</select>
+	<input type="checkbox" id="glow3">
 	<br>
 	<label>Fourth Pokemon:</label>
 	<select id="Pokemon4">
@@ -1736,6 +1739,7 @@
 			<option value="Perrserker">Perrserker</option>
 			<option value="Quagsire">Quagsire</option>
 	</select>
+	<input type="checkbox" id="glow4">
 	<br>
 	<label>Fifth Pokemon:</label>
 	<select id="Pokemon5">
@@ -2164,6 +2168,7 @@
 			<option value="Perrserker">Perrserker</option>
 			<option value="Quagsire">Quagsire</option>
 	</select>
+	<input type="checkbox" id="glow5">
 	<br>
 	<label>Sixth Pokemon:</label>
 	<select id="Pokemon6">
@@ -2592,6 +2597,7 @@
 			<option value="Perrserker">Perrserker</option>
 			<option value="Quagsire">Quagsire</option>
 	</select>
+	<input type="checkbox" id="glow6">
 	<br>
 	<button id="submitButton" class="button">Submit</button>
 </body>
@@ -2613,6 +2619,14 @@
 	
 	const Poke6 = document.querySelector('#Pokemon6');
 	const Pokemon6Replicant = nodecg.Replicant('Poke6');
+	
+	const Glow1 = document.querySelector('#glow1');
+	const Glow2 = document.querySelector('#glow2');
+	const Glow3 = document.querySelector('#glow3');
+	const Glow4 = document.querySelector('#glow4');
+	const Glow5 = document.querySelector('#glow5');
+	const Glow6 = document.querySelector('#glow6');
+	const GlowReplicant = nodecg.Replicant('glowCheckbox');
 	const submitButton = document.querySelector('#submitButton');
 	
 	
@@ -2639,6 +2653,14 @@
 	Pokemon6Replicant.on('change', (newValue, oldValue) => {
 		Poke6.value = `${newValue}`;
 	});
+	GlowReplicant.on('change', (newValue, oldValue) => {
+		Glow1.checked=GlowReplicant.value.glow1;
+		Glow2.checked=GlowReplicant.value.glow2;
+		Glow3.checked=GlowReplicant.value.glow3;
+		Glow4.checked=GlowReplicant.value.glow4;
+		Glow5.checked=GlowReplicant.value.glow5;
+		Glow6.checked=GlowReplicant.value.glow6;
+	});
 	submitButton.onclick = () => {
 		// A Replicant can be modified by modifying its `value`.
 		Pokemon1Replicant.value = Pokemon1.value;
@@ -2647,6 +2669,13 @@
 		Pokemon4Replicant.value = Pokemon4.value;
 		Pokemon5Replicant.value = Pokemon5.value;
 		Pokemon6Replicant.value = Pokemon6.value;
+		GlowReplicant.value.glow1 = Glow1.checked;
+		GlowReplicant.value.glow2 = Glow2.checked;
+		GlowReplicant.value.glow3 = Glow3.checked;
+		GlowReplicant.value.glow4 = Glow4.checked;
+		GlowReplicant.value.glow5 = Glow5.checked;
+		GlowReplicant.value.glow6 = Glow6.checked;
+		
 	};
 </script>
  </html>

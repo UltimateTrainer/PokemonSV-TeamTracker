@@ -1,0 +1,38 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"glow1": {
+			"name": "glow1",
+		  "type": "boolean",
+		  "default": false
+		},
+		"glow2": {
+			"name": "glow2",
+		  "type": "boolean",
+		  "default": false
+		},
+		"glow3": {
+			"name": "glow3",
+		  "type": "boolean",
+		  "default": false
+		},
+		"glow4": {
+			"name": "glow4",
+		  "type": "boolean",
+		  "default": false
+		},
+		"glow5": {
+			"name": "glow5",
+		  "type": "boolean",
+		  "default": false
+		},
+		"glow6": {
+			"name": "glow6",
+		  "type": "boolean",
+		  "default": false
+		}
+	},
+	"required": ["glow1", "glow2", "glow3", "glow4", "glow5", "glow6"]
+	}

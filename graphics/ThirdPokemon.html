@@ -3,6 +3,7 @@
 	<script src="pic.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.2/gsap.min.js"></script>
+	<link href="css/glow.css" rel='stylesheet' type='text/css'>
  <head>
 	<style>
 		@font-face {
@@ -36,21 +37,28 @@
 		#Pokeimg3{
 		left: 0px;
 		}
-		
+		#glow3{
+			position: absolute;
+			opacity: 0;
+		}
 		
 	</style>
  </head>
  <body>
 	<span id="number3" class="number" type="text">3</span>
 	<span id="Poke3" class="pokes" type="text"></span>
+	<img id="glow3" src="img/Glow.png" width="300" height="278">
 	<img id="Pokeimg3" class="pokeimg" width="256" height="256">
 	<img src="img/SVUI.png"></img>
+	<input type="checkbox" id="glow1Checkbox">
+	<input type="checkbox" id="glow2Checkbox">
+	<input type="checkbox" id="glow3Checkbox">
+	<input type="checkbox" id="glow4Checkbox">
+	<input type="checkbox" id="glow5Checkbox">
+	<input type="checkbox" id="glow6Checkbox">
 </body>
 <script>
 	const Pokemon3Replicant = nodecg.Replicant('Poke3');
-	
-	var Pokemon3 = $('#Poke3');
-	
 	Pokemon3Replicant.on('change', (newValue, oldValue) => {
 		Poke3.innerText = `${newValue}`;
 	});

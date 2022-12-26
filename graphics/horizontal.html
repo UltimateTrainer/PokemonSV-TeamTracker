@@ -3,6 +3,7 @@
 	<script src="pic.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.2/gsap.min.js"></script>
+	<link href="css/glow.css" rel='stylesheet' type='text/css'>
  <head>
 	<style>
 		@font-face {
@@ -66,7 +67,35 @@
 		#Pokeimg6{
 		left: 1500px;
 		}
-		
+		#glow1{
+			position: absolute;
+			opacity: 0;
+		}
+		#glow2{
+			position: absolute;
+			opacity: 0;
+			left: 300px;
+		}
+		#glow3{
+			position: absolute;
+			opacity: 0;
+			left: 600px;
+		}
+		#glow4{
+			position: absolute;
+			opacity: 0;
+			left: 900px;
+		}
+		#glow5{
+			position: absolute;
+			opacity: 0;
+			left: 1200px;
+		}
+		#glow6{
+			position: absolute;
+			opacity: 0;
+			left: 1500px;
+		}
 		
 	</style>
  </head>
@@ -77,6 +106,12 @@
 	<span id="number4" class="number" type="text">4</span>
 	<span id="number5" class="number" type="text">5</span>
 	<span id="number6" class="number" type="text">6</span>
+	<img id="glow1" src="img/Glow.png" width="300" height="278">
+	<img id="glow2" src="img/Glow.png" width="300" height="278">
+	<img id="glow3" src="img/Glow.png" width="300" height="278">
+	<img id="glow4" src="img/Glow.png" width="300" height="278">
+	<img id="glow5" src="img/Glow.png" width="300" height="278">
+	<img id="glow6" src="img/Glow.png" width="300" height="278">
 	<span id="Poke1" class="pokes" type="text"></span>
 	<span id="Poke2" class="pokes" type="text"></span>
 	<span id="Poke3" class="pokes" type="text"></span>
@@ -90,6 +125,13 @@
 	<img id="Pokeimg5" class="pokeimg" width="256" height="256">
 	<img id="Pokeimg6" class="pokeimg" width="256" height="256">
 	<img src="img/SVUIHorizontal.png"></img>
+	<input type="checkbox" id="glow1Checkbox">
+	<input type="checkbox" id="glow2Checkbox">
+	<input type="checkbox" id="glow3Checkbox">
+	<input type="checkbox" id="glow4Checkbox">
+	<input type="checkbox" id="glow5Checkbox">
+	<input type="checkbox" id="glow6Checkbox">
+	
 </body>
 <script>
 	const Pokemon1Replicant = nodecg.Replicant('Poke1');

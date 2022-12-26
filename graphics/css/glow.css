@@ -1,0 +1,23 @@
+	#glow1Checkbox{
+		opacity: 0;
+	}
+	#glow2Checkbox{
+		opacity: 0;
+	}
+	#glow3Checkbox{
+		opacity: 0;
+	}
+	#glow4Checkbox{
+		opacity: 0;
+	}
+	#glow5Checkbox{
+		opacity: 0;
+	}
+	#glow6Checkbox{
+		opacity: 0;
+	}
+	#SVUI{
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}

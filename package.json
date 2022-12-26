@@ -35,7 +35,8 @@
 	  {
 		  "file": "FirstPokemon.html",
 		  "width": 300,
-		  "height": 278
+		  "height": 278,
+		  "type": "module"
 	  },
 	  {
 		  "file": "SecondPokemon.html",
