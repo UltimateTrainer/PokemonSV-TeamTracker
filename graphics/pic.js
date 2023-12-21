@@ -9,6 +9,13 @@ var Pokemon6="";
 var startup = true; //flag for if looping functions are on their first pass or not
 function init()
 {
+	$('#Pokeimg1').attr('src','img/empty.png');
+	$('#Pokeimg2').attr('src','img/empty.png');
+	$('#Pokeimg3').attr('src','img/empty.png');
+	$('#Pokeimg4').attr('src','img/empty.png');
+	$('#Pokeimg5').attr('src','img/empty.png');
+	$('#Pokeimg6').attr('src','img/empty.png');
+	
 	var pokemon1 = $('#Poke1');
 	var pokemon2 = $('#Poke2');
 	var pokemon3 = $('#Poke3');
@@ -30,6 +37,8 @@ function init()
 	var Glow6Checkbox=document.querySelector('#glow6Checkbox');
 	
 	const GlowReplicant = nodecg.Replicant('glowCheckbox');
+	
+	
 	
 	var poke1Img = $('#Pokeimg1');
 	var poke2Img = $('#Pokeimg2');
