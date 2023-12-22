@@ -6,6 +6,14 @@ var Pokemon4="";
 var Pokemon5="";
 var Pokemon6="";
 
+var Item1="";
+var Item2="";
+var Item3="";
+var Item4="";
+var Item5="";
+var Item6="";
+
+
 var startup = true; //flag for if looping functions are on their first pass or not
 function init()
 {
@@ -23,6 +31,13 @@ function init()
 	var pokemon5 = $('#Poke5');
 	var pokemon6 = $('#Poke6');
 	
+	var item1 = $('#ItemName1');
+	var item2 = $('#ItemName2');
+	var item3 = $('#ItemName3');
+	var item4 = $('#ItemName4');
+	var item5 = $('#ItemName5');
+	var item6 = $('#ItemName6');
+	
 	var Glow1 = $('#glow1');
 	var Glow2 = $('#glow2');
 	var Glow3 = $('#glow3');
@@ -38,14 +53,19 @@ function init()
 	
 	const GlowReplicant = nodecg.Replicant('glowCheckbox');
 	
-	
-	
 	var poke1Img = $('#Pokeimg1');
 	var poke2Img = $('#Pokeimg2');
 	var poke3Img = $('#Pokeimg3');
 	var poke4Img = $('#Pokeimg4');
 	var poke5Img = $('#Pokeimg5');
 	var poke6Img = $('#Pokeimg6');
+	
+	var item1Img = $('#Itemimg1');
+	var item2Img = $('#Itemimg2');
+	var item3Img = $('#Itemimg3');
+	var item4Img = $('#Itemimg4');
+	var item5Img = $('#Itemimg5');
+	var item6Img = $('#Itemimg6');
 	
 	GlowReplicant.on('change', (newValue, oldValue) => {
 		Glow1Checkbox.checked=GlowReplicant.value.glow1;
@@ -60,7 +80,7 @@ function init()
 	setInterval(function(){glowRefresh();},2600);
 	function pokePicFunc(poke,pokeimg)
 	{
-		console.log(poke.text());
+		//console.log(poke.text())
 		if(poke.text()==""){
 			pokeimg.css('opacity', 0);
 			pokeimg.attr('src','img/empty.png');
@@ -72,6 +92,22 @@ function init()
 				
 			}});
 			TweenMax.to(pokeimg,.5,{css:{opacity: 1},ease:Quad.easeOut,delay:.75});
+		}
+	}
+	
+	function itemPicFunc(item,itemimg)
+	{
+		if(item.text()==""){
+			itemimg.css('opacity', 0);
+			itemimg.attr('src','img/empty.png');
+		}
+		else
+		{
+			TweenMax.to(itemimg,.5,{css:{opacity: 0},ease:Quad.easeOut,delay:0,onComplete:function(){
+			itemimg.attr('src','img/Items/'+item.text()+'.png');
+				
+			}});
+			TweenMax.to(itemimg,.5,{css:{opacity: 1},ease:Quad.easeOut,delay:.75});
 		}
 	}
 	
@@ -107,6 +143,37 @@ function init()
 			pokePicFunc(pokemon6,poke6Img);	
 			Pokemon6=pokemon6.text();
 		}
+		if(item1.text()!=Item1)
+		{
+			itemPicFunc(item1,item1Img);	
+			Item1=item1.text();
+		}
+		if(item2.text()!=Item2)
+		{
+			itemPicFunc(item2,item2Img);	
+			Item2=item2.text();
+		}
+		if(item3.text()!=Item3)
+		{
+			itemPicFunc(item3,item3Img);	
+			Item3=item1.text();
+		}
+		if(item4.text()!=Item4)
+		{
+			itemPicFunc(item4,item4Img);	
+			Item4=item4.text();
+		}
+		if(item5.text()!=Item5)
+		{
+			itemPicFunc(item5,item5Img);	
+			Item5=item5.text();
+		}
+		if(item6.text()!=Item6)
+		{
+			itemPicFunc(item6,item6Img);	
+			Item6=item6.text();
+		}
+		
 		
 	}
 	function glowFunc(glow){

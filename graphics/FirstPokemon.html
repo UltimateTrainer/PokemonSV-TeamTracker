@@ -23,6 +23,23 @@
 			position: absolute;
 			left: 0px;
 		}
+		#Item1{
+			font-size:38px;
+			font-family: "FF";
+			color: Yellow;
+			display: none;
+		}
+		.item{
+			font-size:38px;
+			font-family: "FF";
+			color: Yellow;
+			display: none;
+		}
+		.itemimg{
+			position: absolute;
+			left: 140px;
+			top: 150px;
+		}
 		.number{
 			font-size:38px;
 			font-family: "FF";
@@ -47,9 +64,11 @@
  <body>
 	<span id="number1" class="number" type="text">1</span>
 	<span id="Poke1" class="pokes" type="text"></span>
+	<span id="ItemName1" class="item" type="text"></span>
 	<img id="glow1" src="img/Glow.png" width="300" height="278">
-	<img id="Pokeimg1" src="img/empty.png" class="pokeimg" width="256" height="256" src="img/Paldea/empty.png">
+	<img id="Pokeimg1" src="img/empty.png" class="pokeimg" width="256" height="256">
 	<img src="img/SVUI.png"></img>
+	<img id="Itemimg1" src="img/empty.png" class="itemimg" width="100" height="100">
 	<input type="checkbox" id="glow1Checkbox">
 	<input type="checkbox" id="glow2Checkbox">
 	<input type="checkbox" id="glow3Checkbox">
@@ -60,7 +79,9 @@
 <script>
 	
 	const Pokemon1Replicant = nodecg.Replicant('Poke1');
+	const Item1Replicant = nodecg.Replicant('Item1');
 	var Pokemon1 = $('#Poke1');
+	var Item1 = $('#ItemName1');
 	
 	var Glow1 = $('#glow1');
 	
@@ -68,7 +89,8 @@
 		Poke1.innerText = `${newValue}`;
 	});
 	
-
-	
-</script
+	Item1Replicant.on('change', (newValue, oldValue) => {
+		ItemName1.innerText = `${newValue}`;
+	});
+</script>
  </html>
