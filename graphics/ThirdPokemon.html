@@ -40,27 +40,54 @@
 		#glow3{
 			position: absolute;
 			opacity: 0;
+			left: 0px;
 		}
-		
+		.KOclass{
+			position: absolute;
+			opacity: 0;
+		}
+		#KO3{
+			top: 0px;
+			left: 220px;
+		}
+		#Itemimg3{
+			position: absolute;
+			left: 140px;
+			top: 190px;
+		}
 	</style>
  </head>
  <body>
 	<span id="number3" class="number" type="text">3</span>
 	<span id="Poke3" class="pokes" type="text"></span>
+	<span id="ItemName3" class="item" type="text"></span>
 	<img id="glow3" src="img/Glow.png" width="300" height="278">
 	<img id="Pokeimg3" src="img/empty.png" class="pokeimg" width="256" height="256">
 	<img src="img/SVUI.png"></img>
+	<img id="Itemimg3" src="img/empty.png" class="itemimg" width="100" height="100">
 	<input type="checkbox" id="glow1Checkbox">
 	<input type="checkbox" id="glow2Checkbox">
 	<input type="checkbox" id="glow3Checkbox">
 	<input type="checkbox" id="glow4Checkbox">
 	<input type="checkbox" id="glow5Checkbox">
 	<input type="checkbox" id="glow6Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="KO1Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="KO2Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="KO3Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="KO4Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="KO5Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="KO6Checkbox">
+	<img id="KO3" class="KOclass" src="img/KO.png" width="100" height="100">
 </body>
 <script>
 	const Pokemon3Replicant = nodecg.Replicant('Poke3');
+	const Item3Replicant = nodecg.Replicant('Item3');
+	var Item3 = $('#ItemName3');
 	Pokemon3Replicant.on('change', (newValue, oldValue) => {
 		Poke3.innerText = `${newValue}`;
+	});
+	Item3Replicant.on('change', (newValue, oldValue) => {
+		ItemName3.innerText = `${newValue}`;
 	});
 </script
  </html>

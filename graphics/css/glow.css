@@ -16,6 +16,17 @@
 	#glow6Checkbox{
 		opacity: 0;
 	}
+	.checkboxfiller{
+		opacity: 0;
+	}
+	.item{
+		opacity: 0;
+		position: absolute;
+	}
+	.KOclass{
+		opacity: 0;
+		position: absolute;
+	}
 	#SVUI{
 		position: absolute;
 		top: 0px;

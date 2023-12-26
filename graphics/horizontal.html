@@ -96,6 +96,66 @@
 			opacity: 0;
 			left: 1500px;
 		}
+		#Itemimg1{
+			position: absolute;
+			left: 140px;
+			top: 190px;
+			opacity: 0;
+		}
+		#Itemimg2{
+			position: absolute;
+			left: 440px;
+			top: 190px;
+			opacity: 0;
+		}
+		#Itemimg3{
+			position: absolute;
+			left: 740px;
+			top: 190px;
+			opacity: 0;
+		}
+		#Itemimg4{
+			position: absolute;
+			left: 1040px;
+			top: 190px;
+			opacity: 0;
+		}
+		#Itemimg5{
+			position: absolute;
+			left: 1340px;
+			top: 190px;
+			opacity: 0;
+		}
+		#Itemimg6{
+			position: absolute;
+			left: 1640px;
+			top: 190px;
+			opacity: 0;
+		}
+		#KO1{
+			top: 0px;
+			left: 220px;
+		}
+		#KO2{
+			top: 0px;
+			left: 520px;
+		}
+		#KO3{
+			top: 0px;
+			left: 820px;
+		}
+		#KO4{
+			top: 0px;
+			left: 1120px;
+		}
+		#KO5{
+			top: 0px;
+			left: 1420px;
+		}
+		#KO6{
+			top: 0px;
+			left: 1720px;
+		}
 		
 	</style>
  </head>
@@ -118,6 +178,12 @@
 	<span id="Poke4" class="pokes" type="text"></span>
 	<span id="Poke5" class="pokes" type="text"></span>
 	<span id="Poke6" class="pokes" type="text"></span>
+	<span id="ItemName1" class="item" type="text"></span>
+	<span id="ItemName2" class="item" type="text"></span>
+	<span id="ItemName3" class="item" type="text"></span>
+	<span id="ItemName4" class="item" type="text"></span>
+	<span id="ItemName5" class="item" type="text"></span>
+	<span id="ItemName6" class="item" type="text"></span>
 	<img id="Pokeimg1" src="img/empty.png" class="pokeimg" width="256" height="256">
 	<img id="Pokeimg2" src="img/empty.png" class="pokeimg" width="256" height="256">
 	<img id="Pokeimg3" src="img/empty.png" class="pokeimg" width="256" height="256">
@@ -125,12 +191,36 @@
 	<img id="Pokeimg5" src="img/empty.png" class="pokeimg" width="256" height="256">
 	<img id="Pokeimg6" src="img/empty.png" class="pokeimg" width="256" height="256">
 	<img src="img/SVUIHorizontal.png"></img>
+	<img id="Itemimg1" src="img/empty.png" class="itemimg" width="100" height="100">
+	<img id="Itemimg2" src="img/empty.png" class="itemimg" width="100" height="100">
+	<img id="Itemimg3" src="img/empty.png" class="itemimg" width="100" height="100">
+	<img id="Itemimg4" src="img/empty.png" class="itemimg" width="100" height="100">
+	<img id="Itemimg5" src="img/empty.png" class="itemimg" width="100" height="100">
+	<img id="Itemimg6" src="img/empty.png" class="itemimg" width="100" height="100">
 	<input type="checkbox" id="glow1Checkbox">
 	<input type="checkbox" id="glow2Checkbox">
 	<input type="checkbox" id="glow3Checkbox">
 	<input type="checkbox" id="glow4Checkbox">
 	<input type="checkbox" id="glow5Checkbox">
 	<input type="checkbox" id="glow6Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="glow1Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="glow2Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="glow3Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="glow4Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="glow5Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="glow6Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="KO1Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="KO2Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="KO3Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="KO4Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="KO5Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="KO6Checkbox">
+	<img id="KO1" class="KOclass" src="img/KO.png" width="100" height="100">
+	<img id="KO2" class="KOclass" src="img/KO.png" width="100" height="100">
+	<img id="KO3" class="KOclass" src="img/KO.png" width="100" height="100">
+	<img id="KO4" class="KOclass" src="img/KO.png" width="100" height="100">
+	<img id="KO5" class="KOclass" src="img/KO.png" width="100" height="100">
+	<img id="KO6" class="KOclass" src="img/KO.png" width="100" height="100">
 	
 </body>
 <script>
@@ -140,6 +230,18 @@
 	const Pokemon4Replicant = nodecg.Replicant('Poke4');
 	const Pokemon5Replicant = nodecg.Replicant('Poke5');
 	const Pokemon6Replicant = nodecg.Replicant('Poke6');
+	const Item1Replicant = nodecg.Replicant('Item1');
+	const Item2Replicant = nodecg.Replicant('Item2');
+	const Item3Replicant = nodecg.Replicant('Item3');
+	const Item4Replicant = nodecg.Replicant('Item4');
+	const Item5Replicant = nodecg.Replicant('Item5');
+	const Item6Replicant = nodecg.Replicant('Item6');
+	var Item1 = $('#ItemName1');
+	var Item2 = $('#ItemName2');
+	var Item3 = $('#ItemName3');
+	var Item4 = $('#ItemName4');
+	var Item5 = $('#ItemName5');
+	var Item6 = $('#ItemName6');
 	
 	var Pokemon1 = $('#Poke1');
 	var Pokemon2 = $('#Poke2');
@@ -171,6 +273,24 @@
 	
 	Pokemon6Replicant.on('change', (newValue, oldValue) => {
 		Poke6.innerText = `${newValue}`;
+	});
+	Item1Replicant.on('change', (newValue, oldValue) => {
+		ItemName1.innerText = `${newValue}`;
+	});
+	Item2Replicant.on('change', (newValue, oldValue) => {
+		ItemName2.innerText = `${newValue}`;
+	});
+	Item3Replicant.on('change', (newValue, oldValue) => {
+		ItemName3.innerText = `${newValue}`;
+	});
+	Item4Replicant.on('change', (newValue, oldValue) => {
+		ItemName4.innerText = `${newValue}`;
+	});
+	Item5Replicant.on('change', (newValue, oldValue) => {
+		ItemName5.innerText = `${newValue}`;
+	});
+	Item6Replicant.on('change', (newValue, oldValue) => {
+		ItemName6.innerText = `${newValue}`;
 	});
 </script
  </html>

@@ -28,42 +28,37 @@
 	</style>
 </head>
 <body>
-	<label>First Pokemon:</label><br>
-	<input list="pokemonList" id="Pokemon1" name="Pokemon1"> <br>
+	<input list="pokemonList" id="Pokemon1" name="Pokemon1" placeholder="Pokemon">> <br>
 	<input list="itemList" id="ItemList1" name="ItemList1" placeholder="Held Item"> <br>
 	<label>Highlight:</label><input type="checkbox" id="glow1"><label>K.O.</label><input type="checkbox" id="KO1">
 	<hr class="solid">
 	<br>
-	<label>Second Pokemon:</label><br>
-	<input list="pokemonList" id="Pokemon2" name="Pokemon2"><br>
+	<input list="pokemonList" id="Pokemon2" name="Pokemon2" placeholder="Pokemon"><br>
 	<input list="itemList" id="ItemList2" name="ItemList2" placeholder="Held Item"> <br>
 	<label>Highlight:</label><input type="checkbox" id="glow2"><label>K.O.</label><input type="checkbox" id="KO2">
 	<hr class="solid">
 	<br>
-	<label>Third Pokemon:</label><br>
-	<input list="pokemonList" id="Pokemon3" name="Pokemon3"><br>
+	<input list="pokemonList" id="Pokemon3" name="Pokemon3" placeholder="Pokemon"><br>
 	<input list="itemList" id="ItemList3" name="ItemList3" placeholder="Held Item"> <br>
 	<label>Highlight:</label><input type="checkbox" id="glow3"><label>K.O.</label><input type="checkbox" id="KO3">
 	<hr class="solid">
 	<br>
-	<label>Fourth Pokemon:</label><br>
-	<input list="pokemonList" id="Pokemon4" name="Pokemon4"><br>
+	<input list="pokemonList" id="Pokemon4" name="Pokemon4" placeholder="Pokemon"><br>
 	<input list="itemList" id="ItemList4" name="ItemList4" placeholder="Held Item"> <br>
 	<label>Highlight:</label><input type="checkbox" id="glow4"><label>K.O.</label><input type="checkbox" id="KO4">
 	<hr class="solid">
 	<br>
-	<label>Fifth Pokemon:</label><br>
-	<input list="pokemonList" id="Pokemon5" name="Pokemon5"><br>
+	<input list="pokemonList" id="Pokemon5" name="Pokemon5" placeholder="Pokemon"><br>
 	<input list="itemList" id="ItemList5" name="ItemList5" placeholder="Held Item"> <br>
 	<label>Highlight:</label><input type="checkbox" id="glow5"><label>K.O.</label><input type="checkbox" id="KO5">
 	<hr class="solid">
 	<br>
-	<label>Sixth Pokemon:</label><br>
-	<input list="pokemonList" id="Pokemon6" name="Pokemon6"><br>
+	<input list="pokemonList" id="Pokemon6" name="Pokemon6" placeholder="Pokemon"><br>
 	<input list="itemList" id="ItemList6" name="ItemList6" placeholder="Held Item"> <br>
 	<label>Highlight:</label><input type="checkbox" id="glow6"><label>K.O.</label><input type="checkbox" id="KO6">
 	<br>
 	<button id="submitButton" class="button">Submit</button>
+	<button id="resetButton" class="button">Reset</button>
 	
 	<div hidden id=datalists>
 		<datalist id=pokemonList>
@@ -1088,8 +1083,19 @@
 	const Glow4 = document.querySelector('#glow4');
 	const Glow5 = document.querySelector('#glow5');
 	const Glow6 = document.querySelector('#glow6');
+	
+	const KO1 = document.querySelector('#KO1');
+	const KO2 = document.querySelector('#KO2');
+	const KO3 = document.querySelector('#KO3');
+	const KO4 = document.querySelector('#KO4');
+	const KO5 = document.querySelector('#KO5');
+	const KO6 = document.querySelector('#KO6');
+	
+	
 	const GlowReplicant = nodecg.Replicant('glowCheckbox');
+	const KOReplicant = nodecg.Replicant('KOCheckbox');
 	const submitButton = document.querySelector('#submitButton');
+	const resetButton = document.querySelector('#resetButton');
 	
 	const Item1 = document.querySelector('#ItemList1');
 	const Item1Replicant = nodecg.Replicant('Item1');
@@ -1167,6 +1173,14 @@
 		Glow6.checked=GlowReplicant.value.glow6;
 	});
 	
+	KOReplicant.on('change', (newValue, oldValue) => {
+		KO1.checked=KOReplicant.value.KO1;
+		KO2.checked=KOReplicant.value.KO2;
+		KO3.checked=KOReplicant.value.KO3;
+		KO4.checked=KOReplicant.value.KO4;
+		KO5.checked=KOReplicant.value.KO5;
+		KO6.checked=KOReplicant.value.KO6;
+	});
 	
 	submitButton.onclick = () => {
 		// A Replicant can be modified by modifying its `value`.
@@ -1188,8 +1202,38 @@
 		GlowReplicant.value.glow4 = Glow4.checked;
 		GlowReplicant.value.glow5 = Glow5.checked;
 		GlowReplicant.value.glow6 = Glow6.checked;
-		
+		KOReplicant.value.KO1 = KO1.checked;
+		KOReplicant.value.KO2 = KO2.checked;
+		KOReplicant.value.KO3 = KO3.checked;
+		KOReplicant.value.KO4 = KO4.checked;
+		KOReplicant.value.KO5 = KO5.checked;
+		KOReplicant.value.KO6 = KO6.checked;
 	};
-	console.log(Pokemon1.value);
+	resetButton.onclick = () => {
+		Pokemon1Replicant.value = "";
+		Pokemon2Replicant.value = ""
+		Pokemon3Replicant.value = "";
+		Pokemon4Replicant.value = "";
+		Pokemon5Replicant.value = "";
+		Pokemon6Replicant.value = "";
+		Item1Replicant.value = "";
+		Item2Replicant.value = "";
+		Item3Replicant.value = "";
+		Item4Replicant.value = "";
+		Item5Replicant.value = "";
+		Item6Replicant.value = "";
+		GlowReplicant.value.glow1 = false;
+		GlowReplicant.value.glow2 = false;
+		GlowReplicant.value.glow3 = false;
+		GlowReplicant.value.glow4 = false;
+		GlowReplicant.value.glow5 = false;
+		GlowReplicant.value.glow6 = false;
+		KOReplicant.value.KO1 = false;
+		KOReplicant.value.KO2 = false;
+		KOReplicant.value.KO3 = false;
+		KOReplicant.value.KO4 = false;
+		KOReplicant.value.KO5 = false;
+		KOReplicant.value.KO6 = false;
+	}
 </script>
  </html>

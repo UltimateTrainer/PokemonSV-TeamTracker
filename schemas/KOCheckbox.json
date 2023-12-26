@@ -1,0 +1,38 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"KO1": {
+			"name": "KO1",
+		  "type": "boolean",
+		  "default": false
+		},
+		"KO2": {
+			"name": "KO2",
+		  "type": "boolean",
+		  "default": false
+		},
+		"KO3": {
+			"name": "KO3",
+		  "type": "boolean",
+		  "default": false
+		},
+		"KO4": {
+			"name": "KO4",
+		  "type": "boolean",
+		  "default": false
+		},
+		"KO5": {
+			"name": "KO5",
+		  "type": "boolean",
+		  "default": false
+		},
+		"KO6": {
+			"name": "KO6",
+		  "type": "boolean",
+		  "default": false
+		}
+	},
+	"required": ["KO1", "KO2", "KO3", "KO4", "KO5", "KO6"]
+	}

@@ -13,6 +13,12 @@ var Item4="";
 var Item5="";
 var Item6="";
 
+var ko1=false;
+var ko2=false;
+var ko3=false;
+var ko4=false;
+var ko5=false;
+var ko6=false;
 
 var startup = true; //flag for if looping functions are on their first pass or not
 function init()
@@ -51,7 +57,21 @@ function init()
 	var Glow5Checkbox=document.querySelector('#glow5Checkbox');
 	var Glow6Checkbox=document.querySelector('#glow6Checkbox');
 	
+	var KO1 = $('#KO1');
+	var KO2 = $('#KO2');
+	var KO3 = $('#KO3');
+	var KO4 = $('#KO4');
+	var KO5 = $('#KO5');
+	var KO6 = $('#KO6');
+	var KO1Checkbox=document.querySelector('#KO1Checkbox');
+	var KO2Checkbox=document.querySelector('#KO2Checkbox');
+	var KO3Checkbox=document.querySelector('#KO3Checkbox');
+	var KO4Checkbox=document.querySelector('#KO4Checkbox');
+	var KO5Checkbox=document.querySelector('#KO5Checkbox');
+	var KO6Checkbox=document.querySelector('#KO6Checkbox');
+	
 	const GlowReplicant = nodecg.Replicant('glowCheckbox');
+	const KOReplicant = nodecg.Replicant('KOCheckbox');
 	
 	var poke1Img = $('#Pokeimg1');
 	var poke2Img = $('#Pokeimg2');
@@ -76,6 +96,15 @@ function init()
 		Glow6Checkbox.checked=GlowReplicant.value.glow6;
 	});
 	
+	KOReplicant.on('change', (newValue, oldValue) => {
+		KO1Checkbox.checked=KOReplicant.value.KO1;
+		KO2Checkbox.checked=KOReplicant.value.KO2;
+		KO3Checkbox.checked=KOReplicant.value.KO3;
+		KO4Checkbox.checked=KOReplicant.value.KO4;
+		KO5Checkbox.checked=KOReplicant.value.KO5;
+		KO6Checkbox.checked=KOReplicant.value.KO6;
+	});
+	
 	setInterval(function(){picture();},50);
 	setInterval(function(){glowRefresh();},2600);
 	function pokePicFunc(poke,pokeimg)
@@ -97,7 +126,8 @@ function init()
 	
 	function itemPicFunc(item,itemimg)
 	{
-		if(item.text()==""){
+		if(item.text()=="")
+		{
 			itemimg.css('opacity', 0);
 			itemimg.attr('src','img/empty.png');
 		}
@@ -111,70 +141,99 @@ function init()
 		}
 	}
 	
+	
 	function picture()
 	{
 		if(pokemon1.text()!=Pokemon1)
 		{
-			pokePicFunc(pokemon1,poke1Img);	
 			Pokemon1=pokemon1.text();
+			pokePicFunc(pokemon1,poke1Img);	
 		}
 		if(pokemon2.text()!=Pokemon2)
 		{
-			pokePicFunc(pokemon2,poke2Img);	
 			Pokemon2=pokemon2.text();
+			pokePicFunc(pokemon2,poke2Img);
 		}
 		if(pokemon3.text()!=Pokemon3)
 		{
-			pokePicFunc(pokemon3,poke3Img);	
 			Pokemon3=pokemon3.text();
+			pokePicFunc(pokemon3,poke3Img);
 		}
 		if(pokemon4.text()!=Pokemon4)
 		{
-			pokePicFunc(pokemon4,poke4Img);	
 			Pokemon4=pokemon4.text();
+			pokePicFunc(pokemon4,poke4Img);
 		}
 		if(pokemon5.text()!=Pokemon5)
 		{
-			pokePicFunc(pokemon5,poke5Img);	
 			Pokemon5=pokemon5.text();
+			pokePicFunc(pokemon5,poke5Img);
 		}
 		if(pokemon6.text()!=Pokemon6)
 		{
-			pokePicFunc(pokemon6,poke6Img);	
 			Pokemon6=pokemon6.text();
+			pokePicFunc(pokemon6,poke6Img);
 		}
 		if(item1.text()!=Item1)
 		{
-			itemPicFunc(item1,item1Img);	
 			Item1=item1.text();
+			itemPicFunc(item1,item1Img);
 		}
 		if(item2.text()!=Item2)
 		{
-			itemPicFunc(item2,item2Img);	
 			Item2=item2.text();
+			itemPicFunc(item2,item2Img);
 		}
 		if(item3.text()!=Item3)
 		{
+			Item3=item3.text();
 			itemPicFunc(item3,item3Img);	
-			Item3=item1.text();
 		}
 		if(item4.text()!=Item4)
 		{
-			itemPicFunc(item4,item4Img);	
 			Item4=item4.text();
+			itemPicFunc(item4,item4Img);
 		}
 		if(item5.text()!=Item5)
 		{
-			itemPicFunc(item5,item5Img);	
 			Item5=item5.text();
+			itemPicFunc(item5,item5Img);
 		}
 		if(item6.text()!=Item6)
 		{
-			itemPicFunc(item6,item6Img);	
 			Item6=item6.text();
+			itemPicFunc(item6,item6Img);
 		}
-		
-		
+		if(ko1!=KO1Checkbox.checked)
+		{
+			ko1=KO1Checkbox.checked;
+			KOFunc(ko1,KO1);
+		}
+		if(ko2!=KO2Checkbox.checked)
+		{
+			ko2=KO2Checkbox.checked;
+			KOFunc(ko2,KO2);
+		}
+		if(ko3!=KO3Checkbox.checked)
+		{
+			ko3=KO3Checkbox.checked;
+			KOFunc(ko3,KO3);
+		}
+		if(ko4!=KO4Checkbox.checked)
+		{
+			ko4=KO1Checkbox.checked;
+			KOFunc(ko4,KO4);
+		}
+		if(ko5!=KO5Checkbox.checked)
+		{
+			ko5=KO5Checkbox.checked;
+			KOFunc(ko5,KO5);
+		}
+		if(ko6!=KO6Checkbox.checked)
+		{
+			ko6=KO6Checkbox.checked;
+			KOFunc(ko6,KO6);
+		}
 	}
 	function glowFunc(glow){
 		TweenMax.to(glow,1.5,{css:{opacity: .5},ease:Quad.easeOut,delay:1,onComplete:function(){
@@ -182,6 +241,23 @@ function init()
 				
 		}});
 	}
+	
+	function KOFunc(ko,KO){
+		if(ko==false)
+		{
+			KO.css('opacity', 0);
+			KO.attr('src','img/empty.png');
+		}
+		else
+		{
+			TweenMax.to(KO,.5,{css:{opacity: 0},ease:Quad.easeOut,delay:0,onComplete:function(){
+				KO.attr('src','img/KO.png');
+				
+			}});
+			TweenMax.to(KO,.5,{css:{opacity: 1},ease:Quad.easeOut,delay:.75});
+		}
+	}
+	
 	function glowRefresh(){
 		if(Glow1Checkbox.checked)
 			glowFunc(Glow1);
