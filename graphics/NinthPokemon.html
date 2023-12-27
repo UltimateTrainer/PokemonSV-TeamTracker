@@ -10,7 +10,7 @@
 			src: url('fonts/FFFFORWA.ttf');
 			font-family: "FF";
 		}
-		#Poke1{
+		#Poke9{
 			font-size:38px;
 			font-family: "FF";
 			color: Yellow;
@@ -23,21 +23,26 @@
 			position: absolute;
 			left: 0px;
 		}
+		#Itemimg9{
+			position: absolute;
+			left: 140px;
+			top: 190px;
+		}
 		.number{
 			font-size:38px;
 			font-family: "FF";
 			color: Yellow;
 			position: absolute;
-			top: 15px;
-		}
-		/* Places the numbers in the boxes */
-		#number2{
 			left: 240px;
 		}
-		#Pokeimg2{
-		left: 0px;
+		/* Places the numbers in the boxes */
+		#number1{
+			top: 15px;
 		}
-		#glow2{
+		#Pokeimg9{
+		top: 0px;
+		}
+		#glow9{
 			position: absolute;
 			opacity: 0;
 			left:0px;
@@ -46,31 +51,27 @@
 			position: absolute;
 			opacity: 0;
 		}
-		#KO2{
+		#KO9{
 			top: 0px;
 			left: 220px;
 		}
-		#Itemimg2{
-			position: absolute;
-			left: 140px;
-			top: 190px;
-		}
+		
 	</style>
  </head>
  <body>
-	<span id="number2" class="number" type="text">2</span>
-	<span id="Poke2" class="pokes" type="text"></span>
-	<span id="ItemName2" class="item" type="text"></span>
-	<img id="glow2" src="img/Glow.png" width="300" height="278">
-	<img id="Pokeimg2" src="img/empty.png" class="pokeimg" width="256" height="256">
+	<span id="number1" class="number" type="text">3</span>
+	<span id="Poke9" class="pokes" type="text"></span>
+	<span id="ItemName9" class="item" type="text"></span>
+	<img id="glow9" src="img/Glow.png" width="300" height="278">
+	<img id="Pokeimg9" src="img/empty.png" class="pokeimg" width="256" height="256">
 	<img src="img/SVUI.png"></img>
-	<img id="Itemimg2" src="img/empty.png" class="itemimg" width="100" height="100">
+	<img id="Itemimg9" src="img/empty.png" class="itemimg" width="100" height="100">
 	<input class="checkboxfiller" type="checkbox" id="glow1Checkbox">
 	<input class="checkboxfiller" type="checkbox" id="glow2Checkbox">
 	<input class="checkboxfiller" type="checkbox" id="glow3Checkbox">
 	<input class="checkboxfiller" type="checkbox" id="glow4Checkbox">
 	<input class="checkboxfiller" type="checkbox" id="glow5Checkbox">
-	<input class="checkboxfiller"type="checkbox" id="glow6Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="glow6Checkbox">
 	<input class="checkboxfiller" type="checkbox" id="KO1Checkbox">
 	<input class="checkboxfiller" type="checkbox" id="KO2Checkbox">
 	<input class="checkboxfiller" type="checkbox" id="KO3Checkbox">
@@ -89,17 +90,24 @@
 	<input class="checkboxfiller" type="checkbox" id="KO10Checkbox">
 	<input class="checkboxfiller" type="checkbox" id="KO11Checkbox">
 	<input class="checkboxfiller" type="checkbox" id="KO12Checkbox">
-	<img id="KO2" class="KOclass" src="img/KO.png" width="100" height="100">
+	<img id="KO9" class="KOclass" src="img/KO.png" width="100" height="100">
 </body>
 <script>
-	const Pokemon2Replicant = nodecg.Replicant('Poke2');
-	const Item2Replicant = nodecg.Replicant('Item2');
-	var Item2 = $('#ItemName2');
-	Pokemon2Replicant.on('change', (newValue, oldValue) => {
-		Poke2.innerText = `${newValue}`;
+	
+	const Pokemon9Replicant = nodecg.Replicant('Poke9');
+	const Item9Replicant = nodecg.Replicant('Item9');
+	var Item9 = $('#ItemName9');
+	
+	var Pokemon9 = $('#Poke9');
+	
+	var Glow9 = $('#glow9');
+	
+	Pokemon9Replicant.on('change', (newValue, oldValue) => {
+		Poke9.innerText = `${newValue}`;
 	});
-	Item2Replicant.on('change', (newValue, oldValue) => {
-		ItemName2.innerText = `${newValue}`;
+	
+	Item9Replicant.on('change', (newValue, oldValue) => {
+		ItemName9.innerText = `${newValue}`;
 	});
-</script
+</script>
  </html>

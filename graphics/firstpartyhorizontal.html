@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
  <html>
 	<script src="pic.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
@@ -21,81 +21,80 @@
 		}
 		.pokeimg{
 			position: absolute;
-			left: 0px;
+			top: 0px;
 		}
 		.number{
 			font-size:38px;
 			font-family: "FF";
 			color: Yellow;
 			position: absolute;
-			left: 240px;
+			top: 15px;
 		}
 		/* Places the numbers in the boxes */
 		#number1{
-			top: 15px;
+			left: 240px;
 		}
 		#number2{
-			top: 293px;
+			left: 540px;
 		}
 		#number3{
-			top: 571px;
+			left: 840px;
 		}
 		#number4{
-			top: 849px;
+			left: 1140px;
 		}
 		#number5{
-			top: 1127px;
+			left: 1440px;
 		}
 		#number6{
-			top: 1405px;
+			left: 1740px;
 		}
 		#Pokeimg1{
-		top: 0px;
+		left: 0px;
 		}
 		#Pokeimg2{
-		top: 278px;
+		left: 300px;
 		}
 		#Pokeimg3{
-		top: 556px;
+		left: 600px;
 		}
 		#Pokeimg4{
-		top: 834px;
+		left: 900px;
 		}
 		#Pokeimg5{
-		top: 1112px;
+		left: 1200px;
 		}
 		#Pokeimg6{
-		top: 1390px;
+		left: 1500px;
 		}
 		#glow1{
 			position: absolute;
 			opacity: 0;
-			top: 0px;
 		}
 		#glow2{
 			position: absolute;
 			opacity: 0;
-			top: 278px;
+			left: 300px;
 		}
 		#glow3{
 			position: absolute;
 			opacity: 0;
-			top: 556px;
+			left: 600px;
 		}
 		#glow4{
 			position: absolute;
 			opacity: 0;
-			top: 834px;
+			left: 900px;
 		}
 		#glow5{
 			position: absolute;
 			opacity: 0;
-			top: 1112px;
+			left: 1200px;
 		}
 		#glow6{
 			position: absolute;
 			opacity: 0;
-			top: 1390px;
+			left: 1500px;
 		}
 		#Itemimg1{
 			position: absolute;
@@ -105,32 +104,32 @@
 		}
 		#Itemimg2{
 			position: absolute;
-			left: 140px;
-			top: 468px;
+			left: 440px;
+			top: 190px;
 			opacity: 0;
 		}
 		#Itemimg3{
 			position: absolute;
-			left: 140px;
-			top: 746px;
+			left: 740px;
+			top: 190px;
 			opacity: 0;
 		}
 		#Itemimg4{
 			position: absolute;
-			left: 140px;
-			top: 1024px;
+			left: 1040px;
+			top: 190px;
 			opacity: 0;
 		}
 		#Itemimg5{
 			position: absolute;
-			left: 140px;
-			top: 1302px;
+			left: 1340px;
+			top: 190px;
 			opacity: 0;
 		}
 		#Itemimg6{
 			position: absolute;
-			left: 140px;
-			top: 1580px;
+			left: 1640px;
+			top: 190px;
 			opacity: 0;
 		}
 		#KO1{
@@ -138,24 +137,24 @@
 			left: 220px;
 		}
 		#KO2{
-			top: 278px;
-			left: 220px;
+			top: 0px;
+			left: 520px;
 		}
 		#KO3{
-			top: 556px;
-			left: 220px;
+			top: 0px;
+			left: 820px;
 		}
 		#KO4{
-			top: 834px;
-			left: 220px;
+			top: 0px;
+			left: 1120px;
 		}
 		#KO5{
-			top: 1112px;
-			left: 220px;
+			top: 0px;
+			left: 1420px;
 		}
 		#KO6{
-			top: 1390px;
-			left: 220px;
+			top: 0px;
+			left: 1720px;
 		}
 		
 	</style>
@@ -191,7 +190,7 @@
 	<img id="Pokeimg4" src="img/empty.png" class="pokeimg" width="256" height="256">
 	<img id="Pokeimg5" src="img/empty.png" class="pokeimg" width="256" height="256">
 	<img id="Pokeimg6" src="img/empty.png" class="pokeimg" width="256" height="256">
-	<img src="img/SVUIVertical.png"></img>
+	<img src="img/SVUIHorizontal.png"></img>
 	<img id="Itemimg1" src="img/empty.png" class="itemimg" width="100" height="100">
 	<img id="Itemimg2" src="img/empty.png" class="itemimg" width="100" height="100">
 	<img id="Itemimg3" src="img/empty.png" class="itemimg" width="100" height="100">
@@ -210,12 +209,25 @@
 	<input class="checkboxfiller" type="checkbox" id="KO4Checkbox">
 	<input class="checkboxfiller" type="checkbox" id="KO5Checkbox">
 	<input class="checkboxfiller" type="checkbox" id="KO6Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="glow7Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="glow8Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="glow9Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="glow10Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="glow11Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="glow12Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="KO7Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="KO8Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="KO9Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="KO10Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="KO11Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="KO12Checkbox">
 	<img id="KO1" class="KOclass" src="img/KO.png" width="100" height="100">
 	<img id="KO2" class="KOclass" src="img/KO.png" width="100" height="100">
 	<img id="KO3" class="KOclass" src="img/KO.png" width="100" height="100">
 	<img id="KO4" class="KOclass" src="img/KO.png" width="100" height="100">
 	<img id="KO5" class="KOclass" src="img/KO.png" width="100" height="100">
 	<img id="KO6" class="KOclass" src="img/KO.png" width="100" height="100">
+	
 </body>
 <script>
 	const Pokemon1Replicant = nodecg.Replicant('Poke1');

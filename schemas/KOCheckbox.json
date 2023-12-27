@@ -32,7 +32,37 @@
 			"name": "KO6",
 		  "type": "boolean",
 		  "default": false
+		},
+		"KO7": {
+			"name": "KO7",
+		  "type": "boolean",
+		  "default": false
+		},
+		"KO8": {
+			"name": "KO8",
+		  "type": "boolean",
+		  "default": false
+		},
+		"KO9": {
+			"name": "KO9",
+		  "type": "boolean",
+		  "default": false
+		},
+		"KO10": {
+			"name": "KO10",
+		  "type": "boolean",
+		  "default": false
+		},
+		"KO11": {
+			"name": "KO11",
+		  "type": "boolean",
+		  "default": false
+		},
+		"KO12": {
+			"name": "KO12",
+		  "type": "boolean",
+		  "default": false
 		}
 	},
-	"required": ["KO1", "KO2", "KO3", "KO4", "KO5", "KO6"]
+	"required": ["KO1", "KO2", "KO3", "KO4", "KO5", "KO6", "KO7", "KO8", "KO9", "KO10", "KO11", "KO12"]
 	}

@@ -1,0 +1,302 @@
+ <!DOCTYPE html>
+ <html>
+	<script src="pic.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.2/gsap.min.js"></script>
+	<link href="css/glow.css" rel='stylesheet' type='text/css'>
+ <head>
+	<style>
+		@font-face {
+			src: url('fonts/FFFFORWA.ttf');
+			font-family: "FF";
+		}
+		#Poke1{
+			font-size:38px;
+			font-family: "FF";
+			color: Yellow;
+			display: none;
+		}
+		.pokes{
+			display: none;
+		}
+		.pokeimg{
+			position: absolute;
+			top: 0px;
+		}
+		.number{
+			font-size:38px;
+			font-family: "FF";
+			color: Yellow;
+			position: absolute;
+			top: 15px;
+		}
+		/* Places the numbers in the boxes */
+		#number1{
+			left: 240px;
+		}
+		#number2{
+			left: 540px;
+		}
+		#number3{
+			left: 840px;
+		}
+		#number4{
+			left: 1140px;
+		}
+		#number5{
+			left: 1440px;
+		}
+		#number6{
+			left: 1740px;
+		}
+		#Pokeimg7{
+		left: 0px;
+		}
+		#Pokeimg8{
+		left: 300px;
+		}
+		#Pokeimg9{
+		left: 600px;
+		}
+		#Pokeimg10{
+		left: 900px;
+		}
+		#Pokeimg11{
+		left: 1200px;
+		}
+		#Pokeimg12{
+		left: 1500px;
+		}
+		#glow7{
+			position: absolute;
+			opacity: 0;
+		}
+		#glow8{
+			position: absolute;
+			opacity: 0;
+			left: 300px;
+		}
+		#glow9{
+			position: absolute;
+			opacity: 0;
+			left: 600px;
+		}
+		#glow10{
+			position: absolute;
+			opacity: 0;
+			left: 900px;
+		}
+		#glow11{
+			position: absolute;
+			opacity: 0;
+			left: 1200px;
+		}
+		#glow12{
+			position: absolute;
+			opacity: 0;
+			left: 1500px;
+		}
+		#Itemimg7{
+			position: absolute;
+			left: 140px;
+			top: 190px;
+			opacity: 0;
+		}
+		#Itemimg8{
+			position: absolute;
+			left: 440px;
+			top: 190px;
+			opacity: 0;
+		}
+		#Itemimg9{
+			position: absolute;
+			left: 740px;
+			top: 190px;
+			opacity: 0;
+		}
+		#Itemimg10{
+			position: absolute;
+			left: 1040px;
+			top: 190px;
+			opacity: 0;
+		}
+		#Itemimg11{
+			position: absolute;
+			left: 1340px;
+			top: 190px;
+			opacity: 0;
+		}
+		#Itemimg12{
+			position: absolute;
+			left: 1640px;
+			top: 190px;
+			opacity: 0;
+		}
+		#KO7{
+			top: 0px;
+			left: 220px;
+		}
+		#KO8{
+			top: 0px;
+			left: 520px;
+		}
+		#KO9{
+			top: 0px;
+			left: 820px;
+		}
+		#KO10{
+			top: 0px;
+			left: 1120px;
+		}
+		#KO11{
+			top: 0px;
+			left: 1420px;
+		}
+		#KO12{
+			top: 0px;
+			left: 1720px;
+		}
+		
+	</style>
+ </head>
+ <body>
+	<span id="number1" class="number" type="text">1</span>
+	<span id="number2" class="number" type="text">2</span>
+	<span id="number3" class="number" type="text">3</span>
+	<span id="number4" class="number" type="text">4</span>
+	<span id="number5" class="number" type="text">5</span>
+	<span id="number6" class="number" type="text">6</span>
+	<img id="glow7" src="img/Glow.png" width="300" height="278">
+	<img id="glow8" src="img/Glow.png" width="300" height="278">
+	<img id="glow9" src="img/Glow.png" width="300" height="278">
+	<img id="glow10" src="img/Glow.png" width="300" height="278">
+	<img id="glow11" src="img/Glow.png" width="300" height="278">
+	<img id="glow12" src="img/Glow.png" width="300" height="278">
+	<span id="Poke7" class="pokes" type="text"></span>
+	<span id="Poke8" class="pokes" type="text"></span>
+	<span id="Poke9" class="pokes" type="text"></span>
+	<span id="Poke10" class="pokes" type="text"></span>
+	<span id="Poke11" class="pokes" type="text"></span>
+	<span id="Poke12" class="pokes" type="text"></span>
+	<span id="ItemName7" class="item" type="text"></span>
+	<span id="ItemName8" class="item" type="text"></span>
+	<span id="ItemName9" class="item" type="text"></span>
+	<span id="ItemName10" class="item" type="text"></span>
+	<span id="ItemName11" class="item" type="text"></span>
+	<span id="ItemName12" class="item" type="text"></span>
+	<img id="Pokeimg7" src="img/empty.png" class="pokeimg" width="256" height="256">
+	<img id="Pokeimg8" src="img/empty.png" class="pokeimg" width="256" height="256">
+	<img id="Pokeimg9" src="img/empty.png" class="pokeimg" width="256" height="256">
+	<img id="Pokeimg10" src="img/empty.png" class="pokeimg" width="256" height="256">
+	<img id="Pokeimg11" src="img/empty.png" class="pokeimg" width="256" height="256">
+	<img id="Pokeimg12" src="img/empty.png" class="pokeimg" width="256" height="256">
+	<img src="img/SVUIHorizontal.png"></img>
+	<img id="Itemimg7" src="img/empty.png" class="itemimg" width="100" height="100">
+	<img id="Itemimg8" src="img/empty.png" class="itemimg" width="100" height="100">
+	<img id="Itemimg9" src="img/empty.png" class="itemimg" width="100" height="100">
+	<img id="Itemimg10" src="img/empty.png" class="itemimg" width="100" height="100">
+	<img id="Itemimg11" src="img/empty.png" class="itemimg" width="100" height="100">
+	<img id="Itemimg12" src="img/empty.png" class="itemimg" width="100" height="100">
+	<input class="checkboxfiller" type="checkbox" id="glow1Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="glow2Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="glow3Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="glow4Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="glow5Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="glow6Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="KO1Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="KO2Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="KO3Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="KO4Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="KO5Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="KO6Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="glow7Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="glow8Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="glow9Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="glow10Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="glow11Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="glow12Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="KO7Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="KO8Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="KO9Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="KO10Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="KO11Checkbox">
+	<input class="checkboxfiller" type="checkbox" id="KO12Checkbox">
+	<img id="KO7" class="KOclass" src="img/KO.png" width="100" height="100">
+	<img id="KO8" class="KOclass" src="img/KO.png" width="100" height="100">
+	<img id="KO9" class="KOclass" src="img/KO.png" width="100" height="100">
+	<img id="KO10" class="KOclass" src="img/KO.png" width="100" height="100">
+	<img id="KO11" class="KOclass" src="img/KO.png" width="100" height="100">
+	<img id="KO12" class="KOclass" src="img/KO.png" width="100" height="100">
+	
+</body>
+<script>
+	const Pokemon7Replicant = nodecg.Replicant('Poke7');
+	const Pokemon8Replicant = nodecg.Replicant('Poke8');
+	const Pokemon9Replicant = nodecg.Replicant('Poke9');
+	const Pokemon10Replicant = nodecg.Replicant('Poke10');
+	const Pokemon11Replicant = nodecg.Replicant('Poke11');
+	const Pokemon12Replicant = nodecg.Replicant('Poke12');
+	const Item7Replicant = nodecg.Replicant('Item7');
+	const Item8Replicant = nodecg.Replicant('Item8');
+	const Item9Replicant = nodecg.Replicant('Item9');
+	const Item10Replicant = nodecg.Replicant('Item10');
+	const Item11Replicant = nodecg.Replicant('Item11');
+	const Item12Replicant = nodecg.Replicant('Item12');
+	var Item7 = $('#ItemName7');
+	var Item8 = $('#ItemName8');
+	var Item9 = $('#ItemName9');
+	var Item10 = $('#ItemName10');
+	var Item11 = $('#ItemName11');
+	var Item12 = $('#ItemName12');
+	
+	var Pokemon7 = $('#Poke7');
+	var Pokemon8 = $('#Poke8');
+	var Pokemon9 = $('#Poke9');
+	var Pokemon10 = $('#Poke10');
+	var Pokemon11 = $('#Poke11');
+	var Pokemon12 = $('#Poke12');
+	
+	
+	Pokemon7Replicant.on('change', (newValue, oldValue) => {
+		Poke7.innerText = `${newValue}`;
+	});
+	
+	Pokemon8Replicant.on('change', (newValue, oldValue) => {
+		Poke8.innerText = `${newValue}`;
+	});
+	
+	Pokemon9Replicant.on('change', (newValue, oldValue) => {
+		Poke9.innerText = `${newValue}`;
+	});
+	
+	Pokemon10Replicant.on('change', (newValue, oldValue) => {
+		Poke10.innerText = `${newValue}`;
+	});
+	
+	Pokemon11Replicant.on('change', (newValue, oldValue) => {
+		Poke11.innerText = `${newValue}`;
+	});
+	
+	Pokemon12Replicant.on('change', (newValue, oldValue) => {
+		Poke12.innerText = `${newValue}`;
+	});
+	Item7Replicant.on('change', (newValue, oldValue) => {
+		ItemName7.innerText = `${newValue}`;
+	});
+	Item8Replicant.on('change', (newValue, oldValue) => {
+		ItemName8.innerText = `${newValue}`;
+	});
+	Item9Replicant.on('change', (newValue, oldValue) => {
+		ItemName9.innerText = `${newValue}`;
+	});
+	Item10Replicant.on('change', (newValue, oldValue) => {
+		ItemName10.innerText = `${newValue}`;
+	});
+	Item11Replicant.on('change', (newValue, oldValue) => {
+		ItemName11.innerText = `${newValue}`;
+	});
+	Item12Replicant.on('change', (newValue, oldValue) => {
+		ItemName12.innerText = `${newValue}`;
+	});
+</script
+ </html>

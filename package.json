@@ -18,20 +18,38 @@
         "width": 2,
         "file": "Stream.html",
         "headerColor": "#990000"
+      },
+	  {
+        "name": "Player 2",
+        "title": "Player 2",
+        "width": 2,
+        "file": "Stream2.html",
+        "headerColor": "#000075"
       }
     ],
     "graphics": [
 	  
 	  {
-        "file": "horizontal.html",
+        "file": "firstpartyhorizontal.html",
         "width": 1800,
-        "height": 278
+        "height": 300
       },
 	  {
-		  "file": "vertical.html",
+		  "file": "firstpartyvertical.html",
 		  "width": 300,
 		  "height": 1667
 	  },
+	  {
+        "file": "secondpartyhorizontal.html",
+        "width": 1800,
+        "height": 300
+      },
+	  
+	  {
+        "file": "secondpartyvertical.html",
+        "width": 300,
+        "height": 1667
+      },
 	  {
 		  "file": "FirstPokemon.html",
 		  "width": 300,
@@ -60,6 +78,36 @@
 	  },
 	  {
 		  "file": "SixthPokemon.html",
+		  "width": 300,
+		  "height": 278
+	  },
+	  {
+		  "file": "SeventhPokemon.html",
+		  "width": 300,
+		  "height": 278
+	  },
+	  {
+		  "file": "EighthPokemon.html",
+		  "width": 300,
+		  "height": 278
+	  },
+	  {
+		  "file": "NinthPokemon.html",
+		  "width": 300,
+		  "height": 278
+	  },
+	  {
+		  "file": "TenthPokemon.html",
+		  "width": 300,
+		  "height": 278
+	  },
+	  {
+		  "file": "EleventhPokemon.html",
+		  "width": 300,
+		  "height": 278
+	  },
+	  {
+		  "file": "TwelfthPokemon.html",
 		  "width": 300,
 		  "height": 278
 	  }

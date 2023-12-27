@@ -32,7 +32,37 @@
 			"name": "glow6",
 		  "type": "boolean",
 		  "default": false
+		},
+		"glow7": {
+			"name": "glow7",
+		  "type": "boolean",
+		  "default": false
+		},
+		"glow8": {
+			"name": "glow8",
+		  "type": "boolean",
+		  "default": false
+		},
+		"glow9": {
+			"name": "glow9",
+		  "type": "boolean",
+		  "default": false
+		},
+		"glow10": {
+			"name": "glow10",
+		  "type": "boolean",
+		  "default": false
+		},
+		"glow11": {
+			"name": "glow11",
+		  "type": "boolean",
+		  "default": false
+		},
+		"glow12": {
+			"name": "glow12",
+		  "type": "boolean",
+		  "default": false
 		}
 	},
-	"required": ["glow1", "glow2", "glow3", "glow4", "glow5", "glow6"]
+	"required": ["glow1", "glow2", "glow3", "glow4", "glow5", "glow6","glow7", "glow8", "glow9","glow10", "glow11", "glow12"]
 	}
